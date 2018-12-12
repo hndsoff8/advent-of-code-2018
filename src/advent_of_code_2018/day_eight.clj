@@ -33,7 +33,6 @@
   [input start-idx]
   (let [num-children (nth input start-idx)
         num-metadata-items (nth input (inc start-idx))]
-    ;(print "sum: " (subvec input start-idx) "\n")
     (if (= num-children 0)
       (handle-leaf input start-idx num-metadata-items)
       (let [all-children (loop [sum []
